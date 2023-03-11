@@ -11,5 +11,5 @@ COPY . .
 RUN go build main.go
 
 FROM scratch
-COPY --from=builder /go/src .
+COPY --from=builder /home/ubuntu/projects/super-simple-api-go-orm .
 ENTRYPOINT  ["./main"]
