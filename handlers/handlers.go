@@ -10,6 +10,14 @@ import (
 	"strconv"
 )
 
+func Root(rw http.ResponseWriter, r *http.Request) {
+
+	rw.Header().Set("Content-Type", "application/json")
+	welcome := "welcome to my GoLang Api"
+	sendData(rw, http.StatusOK, welcome)
+
+}
+
 func GetUsers(rw http.ResponseWriter, r *http.Request) {
 	users := models.Users{}
 

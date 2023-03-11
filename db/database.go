@@ -12,7 +12,8 @@ var Database = func() (db *gorm.DB) {
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
 		fmt.Println("Error en la conexión de la base de datos")
-		panic(err)
+		// todo buscar un servicio para conectar con la base de datos
+		//panic(err)
 	}
 	fmt.Println("Conexión exitosa")
 	return db
